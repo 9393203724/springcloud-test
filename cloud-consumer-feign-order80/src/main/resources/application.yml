@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false # 是否向eureka注册
+    service-url:
+      defaultZooe:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ # eureka注册地址(集群环境)
+
+ribbon: # 设置OpenFeign客户端超时时间(OpenFeign默认支持Ribbon)
+  ReadTimeOut: 5000 # 消费者和服务者之间的连接等待时间,超时报错 单位为毫秒
+  ConnectTimeout: 5000 # 发送请求获取数据等待时间,超时报错 单位为毫秒
+
+# OpenFeign日志配置
+logging:
+  level:
+    com.springcloud.service.PaymentFeignService: debug # OpenFeign日志以什么级别监控哪个接口
