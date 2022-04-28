@@ -13,6 +13,11 @@
 
     <artifactId>cloud-provider-payment8001</artifactId>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!-- 引入Eureka客户端 依赖 -->
         <dependency>

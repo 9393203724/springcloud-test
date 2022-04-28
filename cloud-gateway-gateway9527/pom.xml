@@ -11,6 +11,11 @@
 
     <artifactId>cloud-gateway-gateway9527</artifactId>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!-- 引入Gateway 依赖 -->
         <dependency>

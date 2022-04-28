@@ -11,6 +11,11 @@
 
     <artifactId>cloud-provider-hystrix-payment8001</artifactId>
 
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
     <dependencies>
         <!-- 引入Hystrix 依赖 -->
         <dependency>
