@@ -1,0 +1,21 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git: # 配置git
+          uri: git@github.com:9393203724/springcloud-config.git # GitHub上面的git仓库名字
+          search-paths: # 配置搜索目录
+            - springcloud-config
+      label: master # 读取分支
+
+eureka:
+  client:
+    service-url:
+      dafaultZooe: http://eureka7001.com:7001/eureka # 单机环境
+      #dafaultZooe: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka # 集群环境
+
